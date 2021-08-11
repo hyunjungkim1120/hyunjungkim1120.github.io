@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
   },
   "dependencies": {
     "antd": "^4.0.1",
@@ -60,8 +61,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/hyunjungkim1120/hyunjungkim1120.github.io"
-  },
-  "scripts": {
-    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
   }
 }
