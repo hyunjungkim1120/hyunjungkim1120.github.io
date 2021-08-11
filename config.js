@@ -54,6 +54,11 @@ module.exports = {
       description: 'A markup language that powers the web. All websites use HTML for structuring the content.',
       color: '#dd3431',
     },
+    algorithm: {
+      name: 'algorithm',
+      description: 'algorithm algorithm algorithm algorithm algorithm algorithm algorithm algorithm algorithm.',
+      color: '#dd3431',
+    },
     css: {
       name: 'css',
       description: 'CSS is used to style the HTML element and to give a very fancy look for the web application.',
