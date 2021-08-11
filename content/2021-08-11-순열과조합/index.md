@@ -7,16 +7,28 @@ cover: ./combperm.png
 excerpt: 순열, 중복순열, 조합, 중복조합 알고리즘은 응용해서 많은 문제가 나온다. 정확히 이해하고 넘어가자
 ---
 
-순서를 정해서나열하는 - 순열 
-순서를 고려하지않고 뽑는 - 조합
 
 
+**목차**
 
 ------
 
 [TOC]
 
+**간단 예시**
 
+------
+
+**순서를 정해서나열하는 순열** example
+
+- 순열 - 5명의 학생중 반장, 부반장, 선도를 뽑는 경우 (단, 한 사람은 하나의 직책만 맡을 수 있다)
+
+- 중복순열 - 5명의 학생중 반장, 부반장, 선도를 뽑는 경우 (단, 한 사람이 여러개 직책을 맡을 수 있다. 혼자 반장, 부반장, 선도 가능)
+
+**순서를 고려하지않고 뽑는 조합** example
+
+- 조합 - 5명의 학생중 햄버거 먹을 사람 3명 뽑는 경우 (단, 1인 1햄버거)
+- 중복조합 - 5명의 학생중 햄버거 먹을 사람 3명 뽑는 경우 (단, 혼자 햄버거 여러개 먹기 가능)
 
 ## 순열 _ (Permutation)
 
@@ -91,27 +103,29 @@ import java.util.Arrays;
 
 public class 순열 {
 
-  public static void main(String[] args) {
-    // TODO Auto-generated method stub
-    int r = 3; //뽑을 갯수
-    int[] arr = {1, 2, 3};
-    int[] output = new int[r];  
-    boolean[] visited = new boolean[arr.length];  
-    perm(arr, output, visited, 0, r);
-  }
-				//(배열, 결과배열, 방문체크배열, 현재인덱스, 최종적으로뽑을갯수)
-  static void perm(int[] arr, int[] output, boolean[] visited, int depth, int r) {
-    if (depth == r) {
-        System.out.println(Arrays.toString(output));
-        return;
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int r = 3; //뽑을 갯수
+        int[] arr = {1, 2, 3};
+        int[] output = new int[r];
+        boolean[] visited = new boolean[arr.length];
+        perm(arr, output, visited, 0, r);
     }
- 
-    for (int i=0; i<arr.length; i++) {
-        if (visited[i] != true) {
-            visited[i] = true;
-            output[depth] = arr[i];
-            perm(arr, output, visited, depth + 1, r);     
-            visited[i] = false;;
+
+    //(배열, 결과배열, 방문체크배열, 현재인덱스, 최종적으로뽑을갯수)
+    static void perm(int[] arr, int[] output, boolean[] visited, int depth, int r) {
+        if (depth == r) {
+            System.out.println(Arrays.toString(output));
+            return;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (visited[i] != true) {
+                visited[i] = true;
+                output[depth] = arr[i];
+                perm(arr, output, visited, depth + 1, r);
+                visited[i] = false;
+            }
         }
     }
 }
@@ -185,7 +199,7 @@ for문이끝나서 현재 perm이끝나고 이번엔 인덱스 1(i=1)의 방문�
     [3, 2, 3],
     [3, 3, 1],
     [3, 3, 2],
-    [3, 3, 3],
+    [3, 3, 3]
 ]
 ```
 
@@ -200,25 +214,25 @@ import java.util.Arrays;
 
 public class 중복순열 {
 
-  public static void main(String[] args) {
-    // TODO Auto-generated method stub
-    int r = 3; //뽑을 갯수
-    int[] arr = {1, 2, 3};
-    int[] output = new int[r];  
-    reperm(arr, output, 0, r);
-  }
-				//(배열, 결과배열, 현재인덱스, 최종적으로뽑을갯수)
-  static void reperm(int[] arr, int[] output, int depth, int r) {
-    if (depth == r) {
-        System.out.println(Arrays.toString(output));
-        return;
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int r = 3; //뽑을 갯수
+        int[] arr = {1, 2, 3};
+        int[] output = new int[r];
+        reperm(arr, output, 0, r);
     }
- 
-    for (int i=0; i<arr.length; i++) {
-        output[depth] = arr[i];
-        perm(arr, output, depth + 1, r);  
+    //(배열, 결과배열, 현재인덱스, 최종적으로뽑을갯수)
+    static void reperm(int[] arr, int[] output, int depth, int r) {
+        if (depth == r) {
+            System.out.println(Arrays.toString(output));
+            return;
+        }
+
+        for (int i=0; i<arr.length; i++) {
+            output[depth] = arr[i];
+            reperm(arr, output, depth + 1, r);
+        }
     }
-  }
 }
 ```
 
