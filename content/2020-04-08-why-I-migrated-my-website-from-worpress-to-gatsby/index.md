@@ -1,6 +1,6 @@
 ---
 title: Why I migrated my website from wordpress to gatsby? (gatsby vs wordpress)
-tags: [ javascript, gatsby, typescript ]
+tags: [ gatsby ]
 date: 2020-04-08T05:25:44.226Z
 path: blog/why-i-migrated-my-website-from-wordpress-to-gatsby
 cover: ./gatsby-wordpress.jpg

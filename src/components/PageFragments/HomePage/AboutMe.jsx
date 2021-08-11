@@ -6,12 +6,12 @@ import { stripTags, domHtml } from '../../../utils/stripTags';
 import SEO from '../../Seo';
 
 const pageText = {
-  paraOne: `안녕하세요 😅 기록하는 개발자 <b>김현정</b> 입니다. 넓은 IT분야의 많은 개발자들과 피드백하며 더 많이 배우고 싶습니다`,
-  paraTwo: `꾸준히 여러 주제로 찾아뵙겠습니다. 감사합니다! `,
+  paraOne: '안녕하세요 😅 기록하는 개발자 <b>Moong Kim (김현정)</b> 입니다. 넓은 IT분야의 많은 개발자들과 피드백하며 더 많이 배우고 싶습니다',
+  paraTwo: '꾸준히 여러 주제로 찾아뵙겠습니다. 감사합니다!',
 };
 
 const AboutMe = () => {
-  const description = `${pageText.paraOne} ${stripTags(pageText.paraTwo)}`;
+  const description = `${stripTags(pageText.paraOne)} ${stripTags(pageText.paraTwo)}`;
   return (
     <>
       <div>
@@ -22,9 +22,7 @@ const AboutMe = () => {
           keywords={['Hyunjung', 'Reevan', 'Monteiro', 'FullStack developer', 'Javascript', 'ReactJS', 'NodeJS', 'Gatsby']}
         />
         <h1 className="titleSeparate">About Me</h1>
-        <p>
-          {pageText.paraOne}
-        </p>
+        <p dangerouslySetInnerHTML={domHtml(pageText.paraOne)} />
         <p dangerouslySetInnerHTML={domHtml(pageText.paraTwo)} />
       </div>
       <Row gutter={[20, 20]}>
