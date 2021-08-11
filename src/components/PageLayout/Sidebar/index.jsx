@@ -21,9 +21,10 @@ const DomContent = () => (
     <div className={`${style.name} centerAlign`}>
       <div className={`${style.boxName} centerAlign`}>
         <h2>
-          Moong Kim
+          <span>Moong Kim's</span>
+          <br/>
           {' '}
-          <span>개발</span>
+          개발일지
         </h2>
       </div>
       <div className={`${style.badge} ${style.badgeGray}`}>Software Engineer</div>

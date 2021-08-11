@@ -285,7 +285,7 @@ public class 조합 {
         if(target == arr.length)return;
          
         output[depth] = arr[target];
-        comb(arr, output, r+1, depth+1, target+1);//뽑는경우
+        comb(arr, output, r, depth+1, target+1);//뽑는경우
         comb(arr, output, r, depth, target+1);//안뽑는경우
     }
 }
@@ -366,7 +366,7 @@ public class 중복조합 {
         if(target == arr.length)return;
          
         output[depth] = arr[target];
-        comb(arr, output, r+1, depth+1, target);//뽑는경우
+        comb(arr, output, r, depth+1, target);//뽑는경우
         comb(arr, output, r, depth, target+1);//안뽑는경우
     }
 }
