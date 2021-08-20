@@ -1,72 +1,88 @@
-/* Vendor imports */
-const path = require('path');
-/* App imports */
-const config = require('./config');
-const utils = require('./src/utils/pageUtils');
+const path = require("path")
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
 
-  return graphql(`
+  const blogList = path.resolve(`./src/templates/blog-list.js`)
+
+  const result = await graphql(`
     {
-      allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
+            id
             frontmatter {
-              path
-              tags
+              slug
+              template
+              title
             }
-            fileAbsolutePath
           }
         }
       }
-    }    
-  `).then((result) => {
-    if (result.errors) return Promise.reject(result.errors);
+    }
+  `)
 
-    const { allMarkdownRemark } = result.data;
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
 
-    /* Post pages */
-    allMarkdownRemark.edges.forEach(({ node }) => {
-      // Check path prefix of post
-      if (node.frontmatter.path.indexOf(config.pages.blog) !== 0) {
-        // eslint-disable-next-line no-throw-literal
-        throw `Invalid path prefix: ${node.frontmatter.path}`;
-      }
+  // Create markdown pages
+  const posts = result.data.allMarkdownRemark.edges
+  let blogPostsCount = 0
 
-      createPage({
-        path: node.frontmatter.path,
-        component: path.resolve('src/templates/post/post.jsx'),
-        context: {
-          postPath: node.frontmatter.path,
-          translations: utils.getRelatedTranslations(node, allMarkdownRemark.edges),
-        },
-      });
-    });
-    const regexForIndex = /index\.md$/;
-    // Posts in default language, excluded the translated versions
-    const defaultPosts = allMarkdownRemark.edges
-      .filter(({ node: { fileAbsolutePath } }) => fileAbsolutePath.match(regexForIndex));
+  posts.forEach((post, index) => {
+    const id = post.node.id
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
 
-    /* Tag pages */
-    const allTags = [];
-    defaultPosts.forEach(({ node }) => {
-      node.frontmatter.tags.forEach((tag) => {
-        if (allTags.indexOf(tag) === -1) allTags.push(tag);
-      });
-    });
+    createPage({
+      path: post.node.frontmatter.slug,
+      component: path.resolve(
+        `src/templates/${String(post.node.frontmatter.template)}.js`
+      ),
+      // additional data can be passed via context
+      context: {
+        id,
+        previous,
+        next,
+      },
+    })
 
-    allTags
-      .forEach((tag) => {
-        createPage({
-          path: utils.resolvePageUrl(config.pages.tag, tag),
-          component: path.resolve('src/templates/tags/index.jsx'),
-          context: {
-            tag,
-          },
-        });
-      });
+    // Count blog posts.
+    if (post.node.frontmatter.template === "blog-post") {
+      blogPostsCount++
+    }
+  })
 
-    return 1;
-  });
-};
+  // Create blog-list pages
+  const postsPerPage = 9
+  const numPages = Math.ceil(blogPostsCount / postsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: blogList,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+}
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
