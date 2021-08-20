@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-contact-page-js",
     "path": "/contact",
-    "result": {"data":{"markdownRemark":{"id":"eff496ce-a7c9-5b4c-885e-e12af1877dbc","html":"","excerpt":"","frontmatter":{"title":"Get in touch"}},"site":{"siteMetadata":{"title":"Foundation"}}},"pageContext":{"id":"eff496ce-a7c9-5b4c-885e-e12af1877dbc","previous":{"id":"eb804dd1-0e0a-50d5-9b31-74a22e71ce42","frontmatter":{"slug":"/about","template":"about-page","title":"About Foundation"}},"next":null}},
+    "result": {"data":{"markdownRemark":{"id":"eff496ce-a7c9-5b4c-885e-e12af1877dbc","html":"","excerpt":"","frontmatter":{"title":"Get in touch"}},"site":{"siteMetadata":{"title":"Foundation"}}},"pageContext":{"id":"eff496ce-a7c9-5b4c-885e-e12af1877dbc","previous":{"id":"5a70d036-f3a9-5945-82a5-7002895b7e9f","frontmatter":{"slug":"/perm-comb","template":"blog-post","title":"순열과 조합 알고리즘 Java"}},"next":{"id":"a4286318-41c2-56dd-987c-ed0d2b96a2cd","frontmatter":{"slug":"/","template":"index-page","title":"Moongkim 개발일지"}}}},
     "staticQueryHashes": ["228695001","2744905544","358227665"]}
