@@ -7,6 +7,8 @@ import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import { Disqus } from 'gatsby-plugin-disqus';
+
 const styles = {
   "article blockquote": {
     "background-color": "cardBg",
@@ -80,6 +82,12 @@ const Post = ({ data, pageContext }) => {
     previous,
     next,
   }
+  
+  let disqusConfig = {
+    url: pageContext.url,
+    identifier: pageContext.identifier,
+    title: pageContext.title,
+  };
 
   return (
     <Layout className="page">
@@ -114,6 +122,11 @@ const Post = ({ data, pageContext }) => {
         />
       </article>
       {(previous || next) && <Pagination {...props} />}
+      
+      <div className={styles['post__comments']}>
+        <Disqus config={disqusConfig} />
+      </div>
+    
     </Layout>
   )
 }

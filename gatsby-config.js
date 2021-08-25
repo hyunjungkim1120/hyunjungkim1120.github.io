@@ -109,5 +109,11 @@ module.exports = {
     },
     "gatsby-plugin-offline",
     "gatsby-plugin-cname",
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `moongkim-com-1`
+      }
+  },
   ],
 }
