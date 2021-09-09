@@ -3,6 +3,7 @@
 <url> <loc>https://moongkim.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://moongkim.com/kafka</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/jmeter</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/perm-comb</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
