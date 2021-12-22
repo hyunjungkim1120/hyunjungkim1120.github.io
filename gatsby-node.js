@@ -5,6 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const blogList = path.resolve(`./src/templates/blog-list.js`)
+  const algorithmList = path.resolve(`./src/templates/algorithm-list.js`)
 
   const result = await graphql(`
     {
@@ -32,6 +33,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Create markdown pages
   const posts = result.data.allMarkdownRemark.edges
   let blogPostsCount = 0
+  let algorithmPostsCount = 0
 
   posts.forEach((post, index) => {
     const id = post.node.id
@@ -55,6 +57,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     if (post.node.frontmatter.template === "blog-post") {
       blogPostsCount++
     }
+
+    if (post.node.frontmatter.template === "algorithm-post") {
+      algorithmPostsCount++
+    }
   })
 
   // Create blog-list pages
@@ -69,6 +75,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         limit: postsPerPage,
         skip: i * postsPerPage,
         numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+
+  // Create blog-list pages
+  const algorithmPostsPerPage = 9
+  const algorithmNumPages = Math.ceil(algorithmPostsCount / algorithmPostsPerPage)
+
+  Array.from({ length: algorithmNumPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/algorithm` : `/algorithm/${i + 1}`,
+      component: algorithmList,
+      context: {
+        limit: algorithmPostsPerPage,
+        skip: i * algorithmPostsPerPage,
+        algorithmNumPages,
         currentPage: i + 1,
       },
     })
