@@ -40,6 +40,18 @@ const PostCard = ({ data }) => (
       >
         <time>{data.frontmatter.date}</time>
       </p>
+      {data.frontmatter.tags ?
+      <p
+      className="meta"
+      sx={{
+        color: "borderColor",
+        textAlignLast: "right",
+      }}
+    >
+      {data.frontmatter.tags}
+    </p>
+      : ""}
+      
     </div>
   </article>
 )
