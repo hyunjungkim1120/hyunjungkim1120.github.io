@@ -263,15 +263,15 @@ public class ApiController {
 
 응답 확인하기
 
-![200](\assets\Spring\validation\200.PNG)
+![200](/assets/Spring/validation/200.PNG)
 
-![200response](\assets\Spring\validation\200response.PNG)
+![200response](/assets/Spring/validation/200response.PNG)
 
 </br>
 
 age를 65 로 바꿔서 요청해보면
 
-![400response](\assets\Spring\validation\400response.PNG)
+![400response](/assets/Spring/validation/400response.PNG)
 
 age 는 60 이하여야한다는 메세지를 확인할 수 있다.
 
