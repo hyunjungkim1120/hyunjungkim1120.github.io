@@ -49,7 +49,7 @@ show ENGINES;
 
 MariaDb 10.6.3 에서 해당 show ENGINES;을 실행한 결과
 
-<img src="C:\Users\hyunjung\Desktop\현정\showENGINES.JPG" alt="showENGINES" style="zoom:80%;" />
+<img src="/assets/Mysql/showENGINES.JPG" alt="showENGINES" style="zoom:80%;" />
 
 
 
