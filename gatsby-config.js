@@ -23,6 +23,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `fira mono`,
+          `source code pro`,
+          `source sans pro\:300,400,400i,700`
+          ],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/content/`,
