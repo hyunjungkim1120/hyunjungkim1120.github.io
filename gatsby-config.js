@@ -48,6 +48,12 @@ module.exports = {
       options: {
         gfm: true,
         plugins: [
+          {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'your-custom-class-name',
+            },
+          },
           netlifyCmsPaths,
           {
             resolve: `gatsby-remark-images`,

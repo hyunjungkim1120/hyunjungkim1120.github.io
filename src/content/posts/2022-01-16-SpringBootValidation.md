@@ -27,7 +27,7 @@ spring boot 2.3 version 이상부터는 `spring-boot-starter-web` 의존성 내�
 
 </br>
 
-```java
+```java:title=build.gradle
 //Gradle
 implementation 'org.springframework.boot:spring-boot-starter-validation'
     
@@ -70,9 +70,7 @@ implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 ### Annotation 을 사용한 Validation검증
 
-#### class User
-
-```java
+```java:title=User
 package com.example.validation.dto;
 
 import javax.validation.Valid;
@@ -169,9 +167,8 @@ User 는 여러 Item을 가지므로 `List<Item> items` 를 추가한다면 **@V
 
 아래 유효성을 커스텀하는 다른 방법을 살펴볼 예정이니 우선 가볍게 넘어가자.
 
-#### class Item
 
-```java
+```java:title=Item
 package com.example.validation.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -214,10 +211,9 @@ public class Item {
 ```
 
 
+</br>
 
-#### Controller
-
-```java
+```java:title=Controller
 package com.example.validation.controller;
 
 import com.example.validation.dto.User;
@@ -279,9 +275,9 @@ age 는 60 이하여야한다는 메세지를 확인할 수 있다.
 
 유효성을 검증하는 어노테이션을 직접 만들어서 반복 사용할 수 있도록 코드를 구현해보자.
 
-#### @interface DatePattern
+</br>
 
-```java
+```java:title=DatePattern
 package com.example.validation.annotation;
 
 import com.example.validation.validator.DateValidator;
@@ -316,9 +312,7 @@ public @interface DatePattern {
 
 </br>
 
-#### class DateValidator
-
-```java
+```java:title=DateValidator
 package com.example.validation.validator;
 
 import com.example.validation.annotation.DatePattern;

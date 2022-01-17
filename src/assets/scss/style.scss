@@ -7,6 +7,7 @@
 // 	grid-template-rows: 60px auto 60px;
 // 	min-height: 100vh;
 // }
+
 .primary-container main {
   min-height: calc(100vh - 60px - 81px);
 }
@@ -253,7 +254,20 @@ article img {
     }
   }
 }
+.gatsby-remark-code-title,
+.gatsby-code-title {
+  margin-bottom: -0.6rem;
+  padding: 0.2em 0.5em;
+  font-size: 0.9em;
+  font-family: source sans pro, Consolas, 'Fira Mono', 'source code pro', Menlo, Monaco, Consolas, "Courier New", monospace;
 
+  background-color: #5c294157;
+  color: #ffffff;
+  z-index: 0;
+
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
 .blog-post {
   .featured-image {
     border-radius: 12px;
