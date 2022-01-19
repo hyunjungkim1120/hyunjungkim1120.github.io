@@ -1,7 +1,7 @@
 ---
 title: Spring Boot Validation
 template: blog-post
-tags: [ restapi ]
+tags: [ springboot ]
 date: 2022-01-16T05:25:44.226Z
 slug: /springbootvalidation
 featuredImage: /assets/Spring/validation.jpg
@@ -15,7 +15,7 @@ description: Spring RestAPI
 
 ### 유효성체크 | Spring Boot
 
-Spring Boot 에서 유효성 체크를 하는 방법중 `spring-boot-starter-validation` 을 사용하여 유효성을 검증해보자
+💡 Spring Boot 에서 유효성 체크를 하는 방법중 `spring-boot-starter-validation` 을 사용하여 유효성을 검증해보자
 
 </br>
 
@@ -49,6 +49,8 @@ implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 
 </br>
+
+📋  **자주 사용하는 Validation 어노테이션**
 
 - **@NotNull** : 해당 값에 Null을 허용하지 않음
 

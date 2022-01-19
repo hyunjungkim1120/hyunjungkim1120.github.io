@@ -1,7 +1,7 @@
 ---
 title: Spring RestAPI 기초
 template: blog-post
-tags: [ restapi ]
+tags: [ springboot ]
 date: 2022-01-12T05:25:44.226Z
 slug: /springrestapi
 featuredImage: /assets/Spring/restapi.jpg
@@ -13,7 +13,7 @@ description: Spring RestAPI
 
 </br>
 
-### REST 구성
+### 📋 REST 구성
 
 자원(resource): URI
 
@@ -35,7 +35,8 @@ description: Spring RestAPI
 
 name, itemNumber 변수가 있는 ItemDto를 GET해보자! 
 
-```java
+```java:title=Controller
+@RestControllerAdvice
 package com.example.api.controller;
 
 import com.example.api.dto.ItemDto;
@@ -200,7 +201,7 @@ public void delete(@PathVariable String userId, @RequestParam String name){
 
 </br>
 
-### 응답코드
+### 💡 응답코드
 
 - 100 번대 
 

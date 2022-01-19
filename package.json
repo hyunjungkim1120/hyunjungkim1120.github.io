@@ -41,6 +41,7 @@
     "gatsby-plugin-sharp": "^3.1.2",
     "gatsby-plugin-sitemap": "^3.1.0",
     "gatsby-plugin-theme-ui": "^0.6.0",
+    "gatsby-remark-emojis": "^0.4.3",
     "gatsby-remark-images": "^4.1.1",
     "gatsby-remark-prismjs": "^4.1.0",
     "gatsby-remark-responsive-iframe": "^3.1.0",
@@ -57,6 +58,7 @@
     "theme-ui": "^0.6.0"
   },
   "devDependencies": {
+    "gatsby-remark-code-titles": "^1.1.0",
     "gh-pages": "^3.2.3"
   }
 }
