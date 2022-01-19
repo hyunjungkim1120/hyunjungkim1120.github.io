@@ -246,7 +246,27 @@ article img {
   margin: 0 auto;
   padding: 20px;
   line-height: 1.7;
-  font-size: 15px;
+  font-size: 16px;
+  table {
+    width: 100%;
+    border-top: 1px solid #bebebe;
+    border-collapse: collapse;
+  }
+  th {
+    color : #525252;
+    background: #5c294157;
+    border-bottom: 1px solid #bebebe;
+    border-left: 1px solid #bebebe;
+    padding: 10px;
+  }
+  td {
+    border-bottom: 1px solid #bebebe;
+    border-left: 1px solid #bebebe;
+    padding: 10px;
+  }
+  th:first-child, td:first-child {
+    border-left: none;
+  }
   @media (max-width: $breakpoint-md) {
     code {
       font-size: 14px;
