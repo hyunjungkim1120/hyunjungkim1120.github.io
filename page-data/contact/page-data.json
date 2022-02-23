@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-contact-page-js",
     "path": "/contact",
-    "result": {"data":{"markdownRemark":{"id":"6a8619c5-b6cc-5e7e-87ba-165d6f18d176","html":"","excerpt":"","frontmatter":{"title":"Get in touch"}},"site":{"siteMetadata":{"title":"Moongkim"}}},"pageContext":{"id":"6a8619c5-b6cc-5e7e-87ba-165d6f18d176","previous":{"id":"2f0c2f2c-8393-5203-b3f8-5e21dfad033e","frontmatter":{"slug":"/lessons/92342","template":"algorithm-post","title":"양궁대회(프로그래머스) Java"}},"next":{"id":"d7e42c1d-7c16-5ed8-b85c-454bc265931a","frontmatter":{"slug":"/","template":"index-page","title":"Moongkim 개발일지"}}}},
+    "result": {"data":{"markdownRemark":{"id":"b281976c-e1df-51f1-b217-addbcc2d60e3","html":"","excerpt":"","frontmatter":{"title":"Get in touch"}},"site":{"siteMetadata":{"title":"Moongkim"}}},"pageContext":{"id":"b281976c-e1df-51f1-b217-addbcc2d60e3","previous":{"id":"9f92fdb4-28d9-58ee-b201-fc9a05300005","frontmatter":{"slug":"/","template":"index-page","title":"Moongkim 개발일지"}},"next":null}},
     "staticQueryHashes": ["228695001","2744905544","358227665"]}
