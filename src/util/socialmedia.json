@@ -1,24 +1,12 @@
 {
   "socialIcons": [
     {
-      "icon": "facebook",
-      "url": "https://www.facebook.com/stackrolecom"
-    },
-    {
-      "icon": "instagram",
-      "url": "https://www.instagram.com/stackrole/"
+      "icon": "github",
+      "url": "https://github.com/hyunjungkim1120"
     },
     {
       "icon": "linkedin",
-      "url": "https://in.linkedin.com/company/stackrole"
-    },
-    {
-      "icon": "youtube",
-      "url": "https://www.youtube.com/channel/UCc1hYgIP_DzFMMzwLRcbDVQ"
-    },
-    {
-      "icon": "dribbble",
-      "url": "https://dribbble.com/stackrole"
+      "url": "https://www.linkedin.com/in/현정-김-6a2450231"
     }
   ]
 }
