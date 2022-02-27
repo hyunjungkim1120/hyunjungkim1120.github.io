@@ -2,7 +2,7 @@
 template: index-page
 slug: /
 title: Moongkim 개발일지
-tagline: Graphic Designer
+tagline: Programmer
 featuredImage: /assets/myprofile.jpg
 cta:
   ctaText: Know more
