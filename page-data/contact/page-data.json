@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-contact-page-js",
     "path": "/contact",
-    "result": {"data":{"markdownRemark":{"id":"b281976c-e1df-51f1-b217-addbcc2d60e3","html":"","excerpt":"","frontmatter":{"title":"Get in touch"}},"site":{"siteMetadata":{"title":"Moongkim"}}},"pageContext":{"id":"b281976c-e1df-51f1-b217-addbcc2d60e3","previous":{"id":"9f92fdb4-28d9-58ee-b201-fc9a05300005","frontmatter":{"slug":"/","template":"index-page","title":"Moongkim 개발일지"}},"next":null}},
+    "result": {"data":{"markdownRemark":{"id":"6a8619c5-b6cc-5e7e-87ba-165d6f18d176","html":"","excerpt":"","frontmatter":{"title":"Get in touch"}},"site":{"siteMetadata":{"title":"Moongkim"}}},"pageContext":{"id":"6a8619c5-b6cc-5e7e-87ba-165d6f18d176","previous":{"id":"fa2f1161-b54c-5ce3-ad88-ee66e4094225","frontmatter":{"slug":"/about","template":"about-page","title":"기록하는 습관"}},"next":null}},
     "staticQueryHashes": ["228695001","2744905544","358227665"]}
