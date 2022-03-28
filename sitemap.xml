@@ -3,6 +3,7 @@
 <url> <loc>https://moongkim.com/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://moongkim.com/transactional</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/webMvcTest</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/ExtendWith</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/lessons/92342</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
