@@ -3,6 +3,8 @@
 <url> <loc>https://moongkim.com/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://moongkim.com/webMvcTest</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://moongkim.com/ExtendWith</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/lessons/92342</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/lessons/92344</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/constructor-injection</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -18,6 +20,7 @@
 <url> <loc>https://moongkim.com/jmeter</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/perm-comb</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://moongkim.com/blog/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/algorithm</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/algorithm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://moongkim.com/thanks/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
